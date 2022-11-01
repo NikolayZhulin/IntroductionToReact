@@ -15,7 +15,7 @@ function App() {
 			{/*<input type='date'/>*/}
 			{/*<PageTitle title={'This is app titleee'}/>*/}
 			{/*<PageTitle title={'This is my frends'}/>*/}
-			{/*article 1*/}
+			article 1
 			{/*<Rating value={3}/>*/}
 			<Accordion titleValue={'MENU'} collapsed = {true}/>
 			<Accordion titleValue={'Users'} collapsed = {false}/>
