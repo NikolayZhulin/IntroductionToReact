@@ -1,35 +1,31 @@
 import React from 'react';
 
 type AccordionPropsType={
-	titleValue: string,
-	collapsed: boolean,
+	titleValue: string
+	setCollapsed: (collapsed:boolean)=>void
+	collapsed: boolean
 }
 
 function Accordion(props:AccordionPropsType){
 	console.log('accordion rendering')
-	if(props.collapsed){
-	return(
-		<div>
-			<AccordionTitle title={props.titleValue}/>
-			<AccordionBody/>
-		</div>
-	)
-	}else{
 		return(
 			<div>
-				<AccordionTitle title={props.titleValue}/>
+				<AccordionTitle title={props.titleValue} setCollapsed = {props.setCollapsed} collapsed={props.collapsed}/>
+				{!props.collapsed && <AccordionBody/>}
 			</div>
 		)
 	}
-}
+
 
 type AccordionTitlePropsType={
 	title: string
+	setCollapsed: (collapsed:boolean)=>void
+	collapsed: boolean
 }
 
 function AccordionTitle(props:AccordionTitlePropsType) {
 	console.log('AccordionTitle rendering');
-	return <h3>{props.title}</h3>
+	return <h3 onClick={()=>props.setCollapsed(props.collapsed)}>{props.title}</h3>
 }
 
 function AccordionBody() {
