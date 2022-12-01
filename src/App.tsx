@@ -41,7 +41,7 @@ function App() {
 			<ControlledOnOf activeLed={activeLed} setActiveLed={setActiveLed}/>
 			<ControlledOnOf activeLed={activeLed} setActiveLed={setActiveLed}/>
 			<ControlledOnOf activeLed={activeLed} setActiveLed={setActiveLed}/>
-			{/*<SelfControlRating/>*/}
+			<SelfControlRating/>
 			{/*<SelfControlRating/>*/}
 			{/*<SelfControlRating/>*/}
 			{/*<SelfControlRating/>*/}

@@ -20,7 +20,6 @@ export function SelfControlRating() {
 			<Star selected = {value>4} callback={()=>setRating(5)}/>
 		</div>
 	}
-	
 
 type StarPropsType={
 	selected: boolean
@@ -28,7 +27,7 @@ type StarPropsType={
 }
 
 function Star(props: StarPropsType){
-	return <span>
+	return <span onClick={props.callback}>
 		{props.selected? <b>star </b>: 'star '}
 	</span>
 }
