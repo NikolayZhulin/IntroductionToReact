@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
 import {SelfControlRating} from "./SelfControlRating";
 import {action} from "@storybook/addon-actions";
+
 
 
 
@@ -20,7 +20,16 @@ export default {
 
 const callback = action('action');
 
-export const qwertyTitle = () => <SelfControlRating/>
+export const EmptyStarts = () => <SelfControlRating defaultValue={0} onChange={callback}/>
+export const TwoStarts = () => <SelfControlRating defaultValue={1} onChange={callback}/>
+export const ThreeStarts = () => <SelfControlRating defaultValue={2} onChange={callback}/>
+export const FourStarts = () => <SelfControlRating defaultValue={3} onChange={callback}/>
+export const FiveStarts = () => <SelfControlRating defaultValue={4} onChange={callback}/>
+// export const ChangeRating = () =>{
+//     const[ratingValue, setRatingValue]=useState<RatingType>(5)
+//     return(
+//         <SelfControlRating value={ratingValue} setValue={setRatingValue}/>
+//     )
 
 
 

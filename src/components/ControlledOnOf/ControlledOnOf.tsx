@@ -2,6 +2,10 @@ import {useState} from "react";
 
 export type OnOffType = {
 	activeLed: boolean
+	/**
+	 * Set state for OnOff component
+	 * @param activeLed true or false
+	 */
 	setActiveLed:(activeLed:boolean)=>void
 }
 

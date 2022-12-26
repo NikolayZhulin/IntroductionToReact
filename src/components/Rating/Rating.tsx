@@ -9,6 +9,7 @@ type RatingPropsType = {
 }
 
 export function Rating(props: RatingPropsType) {
+	console.log('RAITING')
 	return <div>
 		<Star selected={props.value > 0} setValue={() => props.setValue(1)}/>
 		<Star selected={props.value > 1} setValue={() => props.setValue(2)}/>
